@@ -236,7 +236,7 @@ from .claude.tools.pdf_processor import extract_pdf_text
 
 # 处理PDF
 pdf_path = "input/起诉状.pdf"
-output_dir = "output/[案件编号]/01_案件分析/"
+output_dir = "output/[案件编号]/02 - 📄 案件分析/"
 
 extracted_text, stats = extract_pdf_text(pdf_path, output_dir)
 
@@ -255,8 +255,8 @@ if extracted_text:
 🔍 方法1: pypdf文本提取...
 ✅ pypdf提取成功
 
-✅ Markdown文件已保存: output/[案件编号]/01_案件分析/起诉状.md
-✅ 统计信息已保存: output/[案件编号]/01_案件分析/提取统计.json
+✅ Markdown文件已保存: output/[案件编号]/02 - 📄 案件分析/起诉状.md
+✅ 统计信息已保存: output/[案件编号]/02 - 📄 案件分析/提取统计.json
 
 ✅ 文本提取完成！共提取 1276 字符
 

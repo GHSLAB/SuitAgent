@@ -9,8 +9,12 @@
 rules:
   agent_mapping: .claude/rules/AgentMapping.md
   workflow_system: .claude/rules/WorkflowSystem.md
+  workflow_scenarios: .claude/rules/WorkflowScenarios.md
   time_rules: .claude/rules/TimeRules.md
-  agent_workflows: .claude/rules/agent-workflows/
+  output_standards: .claude/rules/OutputStandards.md
+  rules_meta: .claude/rules/RulesMeta.md
+  pdf_processing: .claude/rules/PDFProcessingRules.md
+  subagent_standards: .claude/rules/SubagentStandards.md
 
 # ====================
 # Agent 输出目录映射
@@ -110,4 +114,8 @@ directory_structure:
 reference_templates:
   agent_mapping: "[`.claude/rules/AgentMapping.md`](.claude/rules/AgentMapping.md)"
   workflow_system: "[`.claude/rules/WorkflowSystem.md`](.claude/rules/WorkflowSystem.md)"
-  agent_workflows: "[`.claude/rules/agent-workflows/`](.claude/rules/agent-workflows/)"
+  workflow_scenarios: "[`.claude/rules/WorkflowScenarios.md`](.claude/rules/WorkflowScenarios.md)"
+  time_rules: "[`.claude/rules/TimeRules.md`](.claude/rules/TimeRules.md)"
+  output_standards: "[`.claude/rules/OutputStandards.md`](.claude/rules/OutputStandards.md)"
+  rules_meta: "[`.claude/rules/RulesMeta.md`](.claude/rules/RulesMeta.md)"
+  subagent_standards: "[`.claude/rules/SubagentStandards.md`](.claude/rules/SubagentStandards.md)"

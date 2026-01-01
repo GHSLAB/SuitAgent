@@ -20,7 +20,7 @@
 - `--evidence-type [合同|发票|转账记录|聊天记录|邮件|录音|录像|照片|证言|鉴定报告|其他]` - 证据类型
 - `--evidence-source [己方提供|对方提供|法院调取|第三方提供]` - 证据来源
 - `--reviewer-name TEXT` - 质证人姓名
-- `--output-dir TEXT` - 输出目录（默认：参见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml) 中 EvidenceAnalyzer 的主要输出目录）
+- `--output-dir TEXT` - 输出目录（默认：参见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md) 中 EvidenceAnalyzer 的主要输出目录）
 
 ### 使用示例
 
@@ -89,7 +89,7 @@
 
 ### 自动生成的文件
 
-> **目录结构**：输出目录定义在 [`.claude/config/case-directories.yaml`](../config/case-directories.yaml) 中
+> **目录结构**：输出目录定义在 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md) 中
 >
 > EvidenceAnalyzer的主要输出目录：`05 - 📎 证据材料`
 

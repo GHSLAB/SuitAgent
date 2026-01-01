@@ -78,7 +78,7 @@ color: blue
 1. **接收案件要素**：DocAnalyzer传递的案件基本信息
 2. **创建管理文件**：生成[案件编号].yaml和[案件编号].md
 3. **期限初始化**：计算案件相关法定期限
-4. **工作区建立**：创建6个标准目录结构
+4. **工作区建立**：创建12层标准目录结构（详见 AgentMapping.md）
 5. **状态记录**：标记案件初始状态
 
 ### 标准流程（期限管理）
@@ -99,10 +99,10 @@ color: blue
 
 ## 输出要求
 - **文件格式**：必须输出.md（Markdown）格式文件
-- **文件位置**：Scheduler的主要输出目录，详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
+- **文件位置**：Scheduler的主要输出目录，详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 - **双格式输出**：同时生成`期限提醒.md`和工作记录文件
 
-> **重要提示**：Scheduler与目录的完整映射关系定义在 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml) 中。
+> **重要提示**：Scheduler与目录的完整映射关系定义在 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md) 中。
 > - 主要输出目录：`00 - 📅 日程管理`
 > - 次要输出目录：`08 - 🏛️ 法院送达`
 

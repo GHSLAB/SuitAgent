@@ -101,8 +101,9 @@ SuitAgent支持基于文档类型的智能识别和自动化工作流编排：
 - **场景映射**：根据文档内容自动映射到对应的工作场景（应诉、质证、分析等）
 - **工作流执行**：按照预设的自动化工作流执行，支持7种常见诉讼场景
 
-> 详细工作流定义请参阅：[`.claude/rules/workflows.md`](.claude/rules/workflows.md)
-> 详细场景识别规则请参阅：[`.claude/rules/scenarios.md`](.claude/rules/scenarios.md)
+> 详细工作流定义请参阅：[`.claude/rules/WorkflowSystem.md`](.claude/rules/WorkflowSystem.md)
+> 详细场景识别规则及案件模板结构请参阅：[`.claude/rules/AgentMapping.md`](.claude/rules/AgentMapping.md)
+> 各 Agent 工作流程配置请参阅：[`.claude/rules/agent-workflows/`](.claude/rules/agent-workflows/)
 
 ## 核心特性
 

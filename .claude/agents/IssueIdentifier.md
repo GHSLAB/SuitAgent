@@ -44,10 +44,10 @@ color: yellow
 
 ## 输出要求
 - **文件格式**：必须输出.md（Markdown）格式文件，不要输出.json
-- **文件位置**：IssueIdentifier的主要输出目录，详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
+- **文件位置**：IssueIdentifier的主要输出目录，详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 - **文件名**：`争议焦点分析.md`
 
-> **重要提示**：IssueIdentifier与目录的完整映射关系定义在 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml) 中。
+> **重要提示**：IssueIdentifier与目录的完整映射关系定义在 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md) 中。
 > - 主要输出目录：`03 - 🔍 法律研究`
 
 ## 输出格式

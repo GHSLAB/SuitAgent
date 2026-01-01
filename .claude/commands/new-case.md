@@ -72,13 +72,13 @@
 
 ### 自动创建的目录结构（12目录架构）
 
-> **重要**：目录结构定义来源于 [`.claude/config/case-directories.yaml`](../config/case-directories.yaml)
+> **重要**：目录结构定义来源于 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 >
-> - 所有目录的 `folder_name` 字段定义了标准格式
+> - 完整的12层标准化架构定义
 > - 命名格式：`{id} - {emoji} {name}`，横线前后必须有空格
-> - 如需修改目录结构，请更新 `case-directories.yaml` 配置文件
+> - Agent与目录的映射关系详见该文件
 >
-> **目录结构概览**（详见配置文件）：
+> **目录结构概览**：
 >
 > ```
 > output/[案件编号]/
@@ -97,7 +97,7 @@
 > └── 11 - 📚 参考文件/
 > ```
 >
-> **每个目录的详细说明**请参考配置文件中的 `description` 字段
+> **每个目录的详细说明和Agent映射**请参考 AgentMapping.md
 
 ## 技术实现
 
@@ -143,9 +143,9 @@
 
 ### Agent目录映射
 
-> **完整映射关系**：详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
+> **完整映射关系**：详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 >
-> 该配置文件定义了所有Agent与目录的映射关系，按四层架构组织：
+> 该文件定义了所有Agent与目录的映射关系，按四层架构组织：
 > - 输入层：DocAnalyzer、EvidenceAnalyzer
 > - 分析层：IssueIdentifier、Researcher、Strategist
 > - 输出层：Writer、Reporter、Summarizer

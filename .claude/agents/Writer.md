@@ -140,7 +140,7 @@ output_path = generate_trust_document(
 
 ### Markdown文书
 - **文件格式**：.md（Markdown）格式文件
-- **文件位置**：Writer的主要输出目录，详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
+- **文件位置**：Writer的主要输出目录，详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 - **命名规范**：`[文书名称]_v1.0.md`
 - **输出标准**：
   - 结构清晰，逻辑严密
@@ -150,7 +150,7 @@ output_path = generate_trust_document(
 
 ### Word委托文件
 - **文件格式**：.docx（Word）格式文件
-- **文件位置**：Writer的主要输出目录，详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
+- **文件位置**：Writer的主要输出目录，详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 - **命名规范**：`[案件编号]_[模板名称]`
 - **占位符替换**：自动替换{client}、{lawyer}等占位符
 - **格式保持**：保持Word模板的原始格式（字体、颜色、对齐等）
@@ -159,7 +159,7 @@ output_path = generate_trust_document(
   - 格式完整保持
   - 内容准确无误
 
-> **重要提示**：Writer与目录的完整映射关系定义在 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml) 中。
+> **重要提示**：Writer与目录的完整映射关系定义在 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md) 中。
 > - 主要输出目录：`06 - 📝 法律文书`
 > - 次要输出目录：`01 - 🤝 委托材料`
 

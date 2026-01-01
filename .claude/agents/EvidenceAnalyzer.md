@@ -94,13 +94,13 @@ color: green
 
 ## 输出要求
 - **文件格式**：必须输出.md（Markdown）格式文件
-- **文件位置**：EvidenceAnalyzer的主要输出目录，详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
+- **文件位置**：EvidenceAnalyzer的主要输出目录，详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 - **文件命名**：
   - 质证意见：`质证意见书.md`
   - 补充证据：`补充证据清单.md`
   - 证据目录：`证据目录.md`
 
-> **重要提示**：EvidenceAnalyzer与目录的完整映射关系定义在 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml) 中。
+> **重要提示**：EvidenceAnalyzer与目录的完整映射关系定义在 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md) 中。
 > - 主要输出目录：`05 - 📎 证据材料`
 > - 次要输出目录：`07 - 📥 对方提交`
 

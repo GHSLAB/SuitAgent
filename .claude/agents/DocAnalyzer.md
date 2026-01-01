@@ -323,13 +323,16 @@ MinerU MCP不可用（未配置或调用失败），将回退到PDF skill进行O
 **创建目录结构**：
 ```
 output/{案件标识}/
-├── 02-案件分析/
+├── 00 - 📅 日程管理/
+├── 02 - 📄 案件分析/
 │   └── {文档名}.md
-├── 05-证据材料/
-├── 00-日程管理/
-├── 03-法律研究/
-└── 10-综合报告/
+├── 03 - 🔍 法律研究/
+├── 05 - 📎 证据材料/
+├── 10 - 📊 综合报告/
+└── ...（其他目录按需创建）
 ```
+
+> **完整目录结构**：详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)（12层标准化架构）
 
 #### 步骤9：更新案件上下文
 
@@ -470,14 +473,17 @@ DocAnalyzer必须从文档中识别标准案号，格式为：
 - **无案号**：使用`{原告}诉{被告}{案由}`格式
 
 **创建目录结构**：
+
 ```
 output/{案件标识}/
-├── 02-案件分析/          ← 本Agent输出
+├── 00 - 📅 日程管理/          ← Scheduler输出
+├── 02 - 📄 案件分析/          ← 本Agent输出
 │   └── {文档名}.md
-├── 05-证据材料/          ← EvidenceAnalyzer输出
-├── 00-日程管理/          ← Scheduler输出
+├── 05 - 📎 证据材料/          ← EvidenceAnalyzer输出
 └── ...（其他目录按需创建）
 ```
+
+> **完整目录结构**：详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)（12层标准化架构）
 
 #### 步骤7：更新案件上下文
 
@@ -500,10 +506,10 @@ output/{案件标识}/
 ### 🎯 输出文件规范
 - **唯一输出**：只生成 `{文件名}.md` 文件
 - **内容包含**：OCR识别结果 + 关键信息提取 + 处理说明
-- **放置位置**：DocAnalyzer的主要输出目录，详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
+- **放置位置**：DocAnalyzer的主要输出目录，详见 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md)
 - **文件命名**：保持原文件名，扩展名改为.md
 
-> **重要提示**：DocAnalyzer与目录的完整映射关系定义在 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml) 中。
+> **重要提示**：DocAnalyzer与目录的完整映射关系定义在 [`.claude/rules/AgentMapping.md`](../rules/AgentMapping.md) 中。
 > - 主要输出目录：`02 - 📄 案件分析`
 > - 次要输出目录：`04 - 📤 客户提供`、`07 - 📥 对方提交`、`08 - 🏛️ 法院送达`、`09 - 🎯 庭审笔录`
 

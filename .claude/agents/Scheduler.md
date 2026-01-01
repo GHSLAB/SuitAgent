@@ -1,7 +1,7 @@
 ---
 name: Scheduler
 description: 日程规划者，负责法律期限管理、案件时间线规划和工作记录工时管理
-tools: ["Read", "Write", "Bash", "Edit", "Grep", "Glob"]
+tools: ["Read", "Write", "Bash", "Edit", "Grep", "Glob", "mcp_mineru"]
 color: blue
 ---
 
@@ -99,8 +99,12 @@ color: blue
 
 ## 输出要求
 - **文件格式**：必须输出.md（Markdown）格式文件
-- **文件位置**：保存到 `output/[案件编号]/00-日程管理/` 目录
+- **文件位置**：Scheduler的主要输出目录，详见 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml)
 - **双格式输出**：同时生成`期限提醒.md`和工作记录文件
+
+> **重要提示**：Scheduler与目录的完整映射关系定义在 [`.claude/config/agent-mappings.yaml`](../config/agent-mappings.yaml) 中。
+> - 主要输出目录：`00 - 📅 日程管理`
+> - 次要输出目录：`08 - 🏛️ 法院送达`
 
 ## 输出格式
 

@@ -1,7 +1,7 @@
 ---
 name: Reviewer
 description: 智能审查器，负责对其他9个Agent的输出进行质量审查和专业评估
-tools: ["Read", "Bash", "Grep", "Write", "Edit", "Glob"]
+tools: ["Read", "Bash", "Grep", "Write", "Edit", "Glob", "mcp_mineru"]
 color: purple
 ---
 

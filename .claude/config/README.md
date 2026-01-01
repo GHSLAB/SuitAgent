@@ -9,12 +9,12 @@
 ```
 .claude/config/
 ├── README.md          # 本文件
-└── paths.yaml         # 路径映射配置文件（单一真实源）
+└── case-directories.yaml         # 路径映射配置文件（单一真实源）
 ```
 
 ## 核心配置文件
 
-### paths.yaml
+### case-directories.yaml
 
 **单一真实源（Single Source of Truth）** - 所有路径配置都从这个文件读取
 
@@ -35,13 +35,13 @@
 
 ```bash
 # 1. 手动编辑
-vim .claude/config/paths.yaml
+vim .claude/config/case-directories.yaml
 
 # 2. 验证配置
 .claude/scripts/verify-config.sh
 
 # 3. 提交更改
-git add .claude/config/paths.yaml
+git add .claude/config/case-directories.yaml
 git commit -m "更新目录结构配置"
 ```
 
@@ -56,12 +56,12 @@ git commit -m "更新目录结构配置"
 ## 与其他目录的关系
 
 - **与 `templates/` 的关系**：
-  - `config/paths.yaml` 是 "应该是什么"
+  - `config/case-directories.yaml` 是 "应该是什么"
   - `templates/case-templates/` 是 "实际是什么"
   - 两者应保持一致，通过验证脚本确保
 
 - **与 `scripts/` 的关系**：
-  - 脚本从 `config/paths.yaml` 读取配置
+  - 脚本从 `config/case-directories.yaml` 读取配置
   - 不再硬编码路径信息
 
 - **与 `agents/` 的关系**：
@@ -71,7 +71,7 @@ git commit -m "更新目录结构配置"
 ## 最佳实践
 
 1. **修改模板前**
-   - 先更新 `config/paths.yaml`
+   - 先更新 `config/case-directories.yaml`
    - 运行验证脚本检查
    - 再修改模板目录
 
@@ -89,7 +89,7 @@ git commit -m "更新目录结构配置"
 
 | 版本 | 日期 | 更新内容 | 修改人 |
 |------|------|----------|--------|
-| v1.0 | 2025-11-19 | 创建paths.yaml作为单一真实源 | AI Agent |
+| v1.0 | 2025-11-19 | 创建case-directories.yaml作为单一真实源 | AI Agent |
 
 ## 相关文档
 

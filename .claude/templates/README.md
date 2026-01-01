@@ -11,48 +11,26 @@
 3. **版本化**：支持不同版本的模板
 4. **分类管理**：按用途和类型组织模板
 
-## 目录结构
-
-```
-.claude/templates/
-├── README.md                         # 本文件
-├── 公司委托模板-剑桥颐华/                  # 律所专有模板（被忽略）
-├── 个人委托模板-剑桥颐华/                  # 律所专有模板（被忽略）
-├── case-templates/                    # 通用案件模板（版本控制）
-│   ├── .gitkeep
-│   ├── 📅 00 - 日程管理/                 # 日程管理模板（期限、工时、看板）
-│   ├── 🤝 01 - 委托材料/                 # 委托材料模板
-│   ├── 📄 02 - 案件分析/                 # 案件分析模板
-│   ├── 🔍 03 - 法律研究/                 # 法律研究模板（前置核心）
-│   ├── 📤 04 - 客户提供/                 # 客户提供材料模板
-│   ├── 📎 05 - 证据材料/                 # 证据材料模板
-│   ├── 📝 06 - 法律文书/                 # 法律文书模板
-│   ├── 📥 07 - 对方提交/                 # 对方提交材料模板
-│   ├── 🏛️ 08 - 法院送达/                 # 法院送达文书模板
-│   ├── 🎯 09 - 庭审笔录/                 # 庭审笔录模板
-│   ├── 📊 10 - 综合报告/                 # 综合报告模板
-│   ├── 📚 11 - 参考文件/                 # 参考文件模板
-│   └── md2word/                       # Markdown转Word模板
-│       └── md2word_template.docx
-```
-
 ## 模板类型
 
 ### 1. 委托文件模板
 
 #### 律所专有模板
+
 ```
 公司委托模板-剑桥颐华/     # 9个Word文档
 个人委托模板-剑桥颐华/     # 8个Word文档
 ```
 
 **特点**：
+
 - 包含律所专有信息和格式
-- 使用`{占位符}`定义变量
-- 通过`placeholder_mapper.py`进行字段映射
-- 被`.gitignore`排除，不纳入版本控制
+- 使用 `{占位符}`定义变量
+- 通过 `placeholder_mapper.py`进行字段映射
+- 被 `.gitignore`排除，不纳入版本控制
 
 **文件格式**：
+
 - **.docx** - Word文档格式，可编辑和定制
 - **命名**：使用数字前缀和描述性名称
   - `000委托文件清单.docx`
@@ -60,6 +38,7 @@
   - `005授权委托书（公司）.docx`
 
 #### 通用委托模板（待创建）
+
 ```
 通用委托模板/              # 标准化模板
 ├── 公司委托/
@@ -71,22 +50,26 @@
 ### 2. 文档转换模板
 
 #### md2word模板
+
 ```
 md2word/                       # Markdown转Word模板
 └── md2word_template.docx      # 标准转换模板
 ```
 
 **特点**：
-- 用于`/2word`命令的格式转换
+
+- 用于 `/2word`命令的格式转换
 - 支持默认、简单、法律文书标准等多种格式
 - 提供可自定义的格式配置
 
 **使用方法**：
+
 ```bash
 /2word --format=格式名称 input.md output.docx
 ```
 
 **格式类型**：
+
 - default - 默认格式（仿宋_GB2312 + Times New Roman）
 - legal-standard - 法律文书标准格式
 - simple - 简化格式
@@ -95,27 +78,36 @@ md2word/                       # Markdown转Word模板
 ### 3. 案件模板（v3.0 - 12目录架构）
 
 #### case-templates - 案件工作区模板
+
 **用途**：为SubAgent创建新案件时提供标准目录结构，覆盖诉讼全生命周期
 
+> **目录结构定义**：详见 [`../config/case-directories.yaml`](../config/case-directories.yaml)
+>
+> - 命名格式：`{id} - {emoji} {name}`（横线前后有空格）
+> - 所有目录名称来自 `folder_name` 字段
+
 **包含内容**：
-- `📅 00 - 日程管理/` - 日程管理目录（期限、工时、看板）
-- `🤝 01 - 委托材料/` - 委托材料目录
-- `📄 02 - 案件分析/` - 案件分析目录
-- `🔍 03 - 法律研究/` - 法律研究目录（前置核心）
-- `📤 04 - 客户提供/` - 客户提供材料目录
-- `📎 05 - 证据材料/` - 证据材料目录
-- `📝 06 - 法律文书/` - 法律文书目录
-- `📥 07 - 对方提交/` - 对方提交材料目录
-- `🏛️ 08 - 法院送达/` - 法院送达文书目录
-- `🎯 09 - 庭审笔录/` - 庭审笔录目录
-- `📊 10 - 综合报告/` - 综合报告目录
-- `📚 11 - 参考文件/` - 参考文件目录
+
+- `00 - 📅 日程管理/` - 日程管理目录（期限、工时、看板）
+- `01 - 🤝 委托材料/` - 委托材料目录
+- `02 - 📄 案件分析/` - 案件分析目录
+- `03 - 🔍 法律研究/` - 法律研究目录（前置核心）
+- `04 - 📤 客户提供/` - 客户提供材料目录
+- `05 - 📎 证据材料/` - 证据材料目录
+- `06 - 📝 法律文书/` - 法律文书目录
+- `07 - 📥 对方提交/` - 对方提交材料目录
+- `08 - 🏛️ 法院送达/` - 法院送达文书目录
+- `09 - 🎯 庭审笔录/` - 庭审笔录目录
+- `10 - 📊 综合报告/` - 综合报告目录
+- `11 - 📚 参考文件/` - 参考文件目录
 
 **核心文件**：
+
 - `[案件编号].yaml` - 案件管理看板数据（v3.0版本）
 - `[案件编号].md` - 案件工作记录看板
 
 **文件格式**：
+
 - **.md** - Markdown格式，便于阅读和编辑
 - **.gitkeep** - 空文件，保持目录结构
 - **README.md** - 每个目录的详细说明文档
@@ -124,25 +116,30 @@ md2word/                       # Markdown转Word模板
 ## 文件命名规范
 
 ### Word文档模板
+
 - **格式**：`{序号}_{描述}.docx`
 - **示例**：`000委托文件清单.docx`, `004委托代理合同.docx`
 - **序号**：使用3位数字，便于排序
 
 ### 案件模板
+
 - **目录**：`{序号} - {emoji} {目录名}/`
 - **示例**：`02 - 📄 案件分析`, `00 - 📅 日程管理`
 - **序号**：使用2位数字，按工作流顺序
 
 ### 工作记录模板
+
 - **格式**：`[案件编号].{md|yaml}`
 - **示例**：`[2025]京0105民初1234号.md`
 
 ## 模板变量格式
 
 ### 占位符格式
+
 在Word文档中使用：`{变量名}`
 
 **示例**：
+
 ```
 {client}           - 委托人姓名
 {lawyer}           - 代理律师姓名
@@ -152,7 +149,9 @@ md2word/                       # Markdown转Word模板
 ```
 
 ### 变量映射
-通过`.claude/tools/placeholder_mapper.py`进行字段映射：
+
+通过 `.claude/tools/placeholder_mapper.py`进行字段映射：
+
 ```python
 YAML字段 → 占位符
 client_name → {client}
@@ -163,6 +162,7 @@ year → {year}
 ## 使用规范
 
 ### 1. 模板引用
+
 ```python
 # 在工具中使用
 template_path = ".claude/templates/case-templates/"
@@ -173,6 +173,7 @@ shutil.copytree(template_path, output_path)
 ```
 
 ### 2. 字段替换
+
 ```python
 # 使用placeholder_mapper.py
 from .placeholder_mapper import yaml_to_placeholders
@@ -182,33 +183,51 @@ DocxProcessor.replace_in_docx(template_file, placeholders)
 ```
 
 ### 3. 目录创建
+
+> 建议从 `case-directories.yaml` 读取目录名称，避免硬编码
+
 ```python
-# Agent中使用
+# Agent中使用（推荐：从配置读取）
+import yaml
+
+with open("../config/case-directories.yaml", "r", encoding="utf-8") as f:
+    config = yaml.safe_load(f)
+    directories = config["case_structure"]["directories"]
+
+for dir_id, dir_info in directories.items():
+    subdir = dir_info["folder_name"]  # 使用标准格式名称
+    os.makedirs(f"output/{case_id}/{subdir}", exist_ok=True)
+    with open(f"output/{case_id}/{subdir}/.gitkeep", "w") as f:
+        f.write("")
+
+# 或使用列表（临时方案）
 for subdir in ["00 - 📅 日程管理", "01 - 🤝 委托材料", "02 - 📄 案件分析",
                "03 - 🔍 法律研究", "04 - 📤 客户提供", "05 - 📎 证据材料",
                "06 - 📝 法律文书", "07 - 📥 对方提交", "08 - 🏛️ 法院送达",
                "09 - 🎯 庭审笔录", "10 - 📊 综合报告", "11 - 📚 参考文件"]:
-    os.makedirs(f"output/{case_id}/{subdir}")
-    with open(f"output/{case_id}/{subdir}/.gitkeep", "w") as f:
-        f.write("")
+    os.makedirs(f"output/{case_id}/{subdir}", exist_ok=True)
 ```
 
 ## 添加新模板
 
 ### Step 1: 确定模板类型
+
 - Word文档 → 委托模板目录
 - 案件结构 → `case-templates/`
 - 工作记录 → `case-templates/`
 
 ### Step 2: 创建模板文件
+
 1. 遵循命名规范
 2. 使用正确的格式
 3. 添加必要的说明
 
 ### Step 3: 更新映射（如需要）
-如果添加了新变量，更新`.claude/tools/placeholder_mapper.py`
+
+如果添加了新变量，更新 `.claude/tools/placeholder_mapper.py`
 
 ### Step 4: 更新文档
+
 在本README中添加新模板的说明
 
 ## 最佳实践

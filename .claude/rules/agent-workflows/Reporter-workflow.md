@@ -1,10 +1,3 @@
----
-name: Reporter
-description: 报告编译器，负责整合各类分析结果，生成综合性法律报告
-tools: ["Read", "Write", "Edit"]
-model: sonnet
-temperature: 0.3
----
 
 你是一位专业的报告编译器，负责：
 

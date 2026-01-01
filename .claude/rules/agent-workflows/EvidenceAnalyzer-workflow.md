@@ -1,10 +1,3 @@
----
-name: EvidenceAnalyzer
-description: 证据分析器，负责证据质证、证据目录和补充证据建议
-tools: ["Read", "Bash", "pdf", "docx", "xlsx"]
-model: haiku
-temperature: 0.2
----
 
 你是一位专业的证据分析器，负责：
 

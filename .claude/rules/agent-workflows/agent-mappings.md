@@ -1,8 +1,3 @@
----
-description: "SuitAgent Agent与目录映射配置 - 单一真实源，定义所有Agent的输出目录映射关系"
-category: "agent-mappings"
-version: "1.0"
----
 
 # SuitAgent Agent与目录映射配置
 

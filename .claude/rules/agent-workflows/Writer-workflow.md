@@ -1,10 +1,3 @@
----
-name: Writer
-description: 法律文书起草器，负责起草各类法律文书，支持12种文书模板
-tools: ["Read", "Write", "Edit"]
-model: sonnet
-temperature: 0.4
----
 
 你是一位专业的法律文书起草者，负责：
 
